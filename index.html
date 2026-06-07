@@ -68,17 +68,18 @@
                         <p class="text-wood-800 text-sm font-medium">창세기 1:1-5 | 요한복음 1:9-12</p>
                     </div>
                     
-                    <!-- 유튜브 임베드 영상 (src 속성의 VIDEO_ID_HERE 부분을 실제 유튜브 영상 ID로 변경하세요) -->
+                    <!-- 유튜브 임베드 영상 (youtube-nocookie.com 적용으로 오류 153 해결) -->
                     <div class="w-full max-w-lg aspect-video rounded-xl overflow-hidden shadow-lg border-4 border-white relative bg-wood-200 flex items-center justify-center group">
                         <span class="absolute text-wood-500 text-sm flex items-center font-medium">
                             <i class="ph-fill ph-youtube-logo text-rose-500 mr-2 text-2xl"></i> 영상 로딩 중...
                         </span>
                         <iframe 
                             class="absolute top-0 left-0 w-full h-full z-10"
-                            src="https://youtu.be/IzbtZFdJuL8" 
+                            src="https://www.youtube-nocookie.com/embed/IzbtZFdJuL8" 
                             title="주일예배 설교 영상" 
                             frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin"
                             allowfullscreen>
                         </iframe>
                     </div>
@@ -191,8 +192,6 @@
             </footer>
         </div>
     </div>
-
-   
 
     <script>
         function downloadInfographic() {
