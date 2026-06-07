@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설교 인포그래픽: 혼돈에서 질서로</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    
+    <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+            background-color: #eaddcf; /* Wood-200 bg */
+        }
+        /* Custom scrollbar for better look */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #fdfbf7; }
+        ::-webkit-scrollbar-thumb { background: #c4a484; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a08060; }
+    </style>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        wood: {
+                            50: '#fdfbf7',  /* Ivory Base */
+                            100: '#f5ede0', /* Light Wood */
+                            200: '#eaddcf', 
+                            300: '#d6c5b3',
+                            400: '#c4a484',
+                            500: '#a08060', /* Standard Wood */
+                            600: '#8b5a2b', /* Dark Wood */
+                            700: '#704214',
+                            800: '#5c4033', /* Deep Brown */
+                            900: '#3e2723',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="flex flex-col items-center py-10 px-4 min-h-screen">
+
+    <!-- 이 컨테이너 영역이 이미지로 캡처됩니다. -->
+    <div id="infographic" class="w-full max-w-2xl bg-wood-50 rounded-3xl shadow-2xl border-4 border-wood-200 overflow-hidden relative">
+        
+        <!-- Background decorative elements -->
+        <div class="absolute top-0 left-0 w-full h-80 bg-gradient-to-b from-wood-200 to-transparent z-0 opacity-50"></div>
+        <div class="absolute -top-24 -right-24 w-64 h-64 bg-wood-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+        
+        <div class="relative z-10 p-8 md:p-12">
+            <!-- Header Section -->
+            <header class="text-center mb-10">
+                <p class="text-wood-600 font-bold tracking-widest text-sm mb-2">주일예배 묵상노트</p>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-wood-900 mb-4 leading-tight">
+                    혼돈에서 <span class="text-transparent bg-clip-text bg-gradient-to-r from-wood-600 to-wood-400">질서로</span>
+                </h1>
+                
+                <div class="flex flex-col items-center gap-3 w-full">
+                    <div class="inline-flex items-center bg-white/50 backdrop-blur-md px-4 py-2 rounded-full border border-wood-300 shadow-sm mb-2">
+                        <i class="ph-fill ph-book-open-text text-wood-600 mr-2 text-lg"></i>
+                        <p class="text-wood-800 text-sm font-medium">창세기 1:1-5 | 요한복음 1:9-12</p>
+                    </div>
+                    
+                    <!-- 유튜브 임베드 영상 (src 속성의 VIDEO_ID_HERE 부분을 실제 유튜브 영상 ID로 변경하세요) -->
+                    <div class="w-full max-w-lg aspect-video rounded-xl overflow-hidden shadow-lg border-4 border-white relative bg-wood-200 flex items-center justify-center group">
+                        <span class="absolute text-wood-500 text-sm flex items-center font-medium">
+                            <i class="ph-fill ph-youtube-logo text-rose-500 mr-2 text-2xl"></i> 영상 로딩 중...
+                        </span>
+                        <iframe 
+                            class="absolute top-0 left-0 w-full h-full z-10"
+                            src="https://www.youtube.com/embed/VIDEO_ID_HERE" 
+                            title="주일예배 설교 영상" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </header>
+
+            <div class="space-y-6 relative">
+                <!-- Connecting line -->
+                <div class="absolute left-[27px] md:left-[39px] top-10 bottom-10 w-0.5 bg-gradient-to-b from-wood-300 via-wood-500 to-amber-500"></div>
+
+                <!-- Step 1: Chaos -->
+                <div class="relative flex items-start gap-4 md:gap-6">
+                    <div class="w-14 h-14 md:w-20 md:h-20 shrink-0 bg-wood-100 rounded-2xl border-2 border-wood-300 flex items-center justify-center shadow-md relative z-10">
+                        <i class="ph-duotone ph-spiral text-3xl md:text-4xl text-wood-600"></i>
+                    </div>
+                    <div class="bg-white border border-wood-200 p-5 rounded-2xl flex-1 shadow-sm relative overflow-hidden">
+                        <div class="absolute right-0 top-0 w-2 h-full bg-wood-200"></div>
+                        <h3 class="text-xl font-bold text-wood-900 mb-2">1. 고아의 영성 <span class="text-sm font-normal text-wood-500 ml-2">혼돈(토후)과 공허(보후)</span></h3>
+                        <p class="text-wood-700 leading-relaxed text-sm md:text-base">
+                            "내가 가라사대, 내 맘대로!" 하나님 없이 내 인생을 스스로 책임지고 통제하려는 교만입니다. 그 결과는 영혼의 텅 빈 공허와 언제 무너질지 모르는 치열한 생존의 불안이었습니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 2: The Word -->
+                <div class="relative flex items-start gap-4 md:gap-6">
+                    <div class="w-14 h-14 md:w-20 md:h-20 shrink-0 bg-wood-500 rounded-2xl border-2 border-wood-600 flex items-center justify-center shadow-md relative z-10">
+                        <i class="ph-duotone ph-chat-centered-text text-3xl md:text-4xl text-wood-50"></i>
+                    </div>
+                    <div class="bg-white border border-wood-200 p-5 rounded-2xl flex-1 shadow-sm relative overflow-hidden">
+                        <div class="absolute right-0 top-0 w-2 h-full bg-wood-400"></div>
+                        <h3 class="text-xl font-bold text-wood-900 mb-2">2. 하나님이 '이르시되' <span class="text-sm font-normal text-wood-500 ml-2">말씀의 개입</span></h3>
+                        <p class="text-wood-700 leading-relaxed text-sm md:text-base">
+                            캄캄한 우리 인생을 고치실 때, 하나님은 망치나 돈(세상의 도구)을 쓰지 않으십니다. 태초부터 계신 <strong>'말씀 곧 예수 그리스도'</strong>께서 우리 삶 한가운데로 주권적으로 뚫고 들어오십니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 3: The Light -->
+                <div class="relative flex items-start gap-4 md:gap-6">
+                    <div class="w-14 h-14 md:w-20 md:h-20 shrink-0 bg-amber-500 rounded-2xl border-2 border-amber-600 flex items-center justify-center shadow-[0_0_15px_rgba(245,158,11,0.3)] relative z-10">
+                        <i class="ph-fill ph-lightbulb text-3xl md:text-4xl text-white"></i>
+                    </div>
+                    <div class="bg-white border border-wood-200 p-5 rounded-2xl flex-1 shadow-sm relative overflow-hidden">
+                        <div class="absolute right-0 top-0 w-2 h-full bg-amber-400"></div>
+                        <h3 class="text-xl font-bold text-wood-900 mb-2">3. 빛이 있으라 <span class="text-sm font-normal text-wood-500 ml-2">거룩한 분리</span></h3>
+                        <p class="text-wood-700 leading-relaxed text-sm md:text-base">
+                            빛이 비칠 때 비로소 엉망진창인 내 내면이 보입니다. 하나님은 빛과 어둠을 철저히 '나누십니다(구별)'. 이제 남을 밟고 일어서려는 어둠의 습관과 거룩하게 분리되어야 합니다.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Step 4: Tov -->
+                <div class="relative flex items-start gap-4 md:gap-6">
+                    <div class="w-14 h-14 md:w-20 md:h-20 shrink-0 bg-emerald-600 rounded-2xl border-2 border-emerald-700 flex items-center justify-center shadow-md relative z-10">
+                        <i class="ph-fill ph-check-circle text-3xl md:text-4xl text-white"></i>
+                    </div>
+                    <div class="bg-white border border-wood-200 p-5 rounded-2xl flex-1 shadow-sm relative overflow-hidden">
+                        <div class="absolute right-0 top-0 w-2 h-full bg-emerald-500"></div>
+                        <h3 class="text-xl font-bold text-wood-900 mb-2">4. 참으로 좋았더라 <span class="text-sm font-normal text-wood-500 ml-2">토브(Tov)의 회복</span></h3>
+                        <p class="text-wood-700 leading-relaxed text-sm md:text-base">
+                            '토브'는 내 통장 잔고가 가득한 상태가 아닙니다. 창조주께서 설계하신 <strong>'목적대로 완벽하게 기능하는 상태'</strong>입니다. 내 좁은 손을 펴서 세상에 생명의 빛을 흘려보내는 삶입니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Application Section -->
+            <div class="mt-12 bg-wood-100 rounded-2xl p-6 md:p-8 shadow-inner border border-wood-300 relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-5">
+                    <i class="ph-fill ph-quotes text-8xl text-wood-900"></i>
+                </div>
+                <h2 class="text-2xl font-extrabold text-wood-900 mb-6 flex items-center">
+                    <i class="ph-fill ph-flag-banner text-wood-600 mr-3"></i> 이번 주 삶의 결단
+                </h2>
+                
+                <ul class="space-y-4 relative z-10">
+                    <li class="flex items-start bg-white p-4 rounded-xl shadow-sm border border-wood-200">
+                        <div class="bg-rose-100 p-2 rounded-lg text-rose-600 mr-4 mt-0.5">
+                            <i class="ph-bold ph-game-controller text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-wood-900">1. 가정: 통제권 반납하기</h4>
+                            <p class="text-sm text-wood-700 mt-1">"내 아이만큼은!" 하며 쥐고 있던 리모컨을 십자가에 내려놓고, 하나님의 주권에 항복합니다.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start bg-white p-4 rounded-xl shadow-sm border border-wood-200">
+                        <div class="bg-emerald-100 p-2 rounded-lg text-emerald-700 mr-4 mt-0.5">
+                            <i class="ph-bold ph-coffee text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-wood-900">2. 일터: 참된 안식 누리기</h4>
+                            <p class="text-sm text-wood-700 mt-1">내가 챙기지 않으면 생존할 수 없다는 불안을 버리고 일터의 주인이 주님이심을 신뢰합니다.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start bg-wood-50 p-4 rounded-xl shadow-sm ring-2 ring-wood-400 ring-offset-2">
+                        <div class="bg-amber-100 p-2 rounded-lg text-amber-700 mr-4 mt-0.5">
+                            <i class="ph-bold ph-power text-xl"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-wood-900">3. 아침 5분: 메인 스위치 켜기</h4>
+                            <p class="text-sm text-wood-700 mt-1">눈 뜨자마자 스마트폰 뉴스 대신, 가장 먼저 성경을 펴서 <strong>말씀의 메인 스위치</strong>를 켭니다.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <footer class="mt-10 text-center text-wood-500 text-sm font-medium border-t border-wood-200 pt-4">
+                &copy; 주일예배 묵상노트 | 혼돈에서 질서로
+            </footer>
+        </div>
+    </div>
+
+    <!-- Action Controls (Not included in image) -->
+    <div class="mt-8 mb-12 flex flex-col items-center gap-4">
+        <button id="downloadBtn" onclick="downloadInfographic()" class="group relative px-8 py-4 bg-wood-800 hover:bg-wood-900 text-white font-bold rounded-full shadow-[0_4px_20px_rgba(92,64,51,0.4)] transition-all active:scale-95 flex items-center">
+            <i class="ph-bold ph-download-simple text-xl mr-2 group-hover:-translate-y-1 transition-transform"></i>
+            <span id="btnText">이미지로 다운로드 (GitHub용)</span>
+        </button>
+        <p class="text-wood-600 text-sm flex items-center bg-white/50 px-3 py-1 rounded-full text-center max-w-lg leading-relaxed">
+            <i class="ph-duotone ph-info mr-1 text-lg shrink-0"></i> 
+            다운로드 후 GitHub에 업로드해 보세요. <br>
+            (※ 브라우저 보안 정책상 유튜브 영상 화면은 캡처 이미지에 빈칸으로 저장될 수 있습니다.)
+        </p>
+    </div>
+
+    <script>
+        function downloadInfographic() {
+            const btn = document.getElementById('downloadBtn');
+            const btnText = document.getElementById('btnText');
+            const originalText = btnText.innerText;
+            const targetElement = document.getElementById('infographic');
+
+            // Set button state to loading
+            btn.classList.add('opacity-80', 'cursor-not-allowed');
+            btnText.innerText = "이미지 생성 중...";
+
+            // Use html2canvas to capture the element
+            html2canvas(targetElement, {
+                scale: 2, // High resolution
+                useCORS: true, // Allow cross-origin images
+                backgroundColor: null, // Keep border radius transparency
+            }).then(canvas => {
+                // Convert canvas to data URL
+                const image = canvas.toDataURL("image/png");
+
+                // Create a temporary anchor element to trigger download
+                const link = document.createElement('a');
+                link.href = image;
+                link.download = 'sermon-infographic-genesis1-wood.png';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+
+                // Reset button state
+                btnText.innerText = "다운로드 완료! 🎉";
+                btn.classList.remove('bg-wood-800', 'hover:bg-wood-900');
+                btn.classList.add('bg-emerald-600', 'hover:bg-emerald-700');
+
+                // Revert button text after 3 seconds
+                setTimeout(() => {
+                    btnText.innerText = originalText;
+                    btn.classList.remove('bg-emerald-600', 'hover:bg-emerald-700');
+                    btn.classList.add('bg-wood-800', 'hover:bg-wood-900');
+                    btn.classList.remove('opacity-80', 'cursor-not-allowed');
+                }, 3000);
+            }).catch(err => {
+                console.error("Error generating image: ", err);
+                btnText.innerText = "오류 발생! 다시 시도";
+                btn.classList.add('bg-rose-600');
+                setTimeout(() => {
+                    btnText.innerText = originalText;
+                    btn.classList.remove('bg-rose-600');
+                    btn.classList.remove('opacity-80', 'cursor-not-allowed');
+                }, 3000);
+            });
+        }
+    </script>
+</body>
+</html>
